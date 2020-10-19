@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="ITSOAPWebServiceContaservice" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types />
+  <message name="ObtenerEmpresas0Request">
+    <part name="Codigo" type="xs:string" />
+  </message>
+  <message name="ObtenerEmpresas0Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="ObtenerUsuarios1Request">
+    <part name="Codigo" type="xs:string" />
+  </message>
+  <message name="ObtenerUsuarios1Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="ObtenerMonedas2Request">
+    <part name="Codigo" type="xs:string" />
+  </message>
+  <message name="ObtenerMonedas2Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="ObtenerCotizacion3Request">
+    <part name="Empresa" type="xs:string" />
+    <part name="Fecha" type="xs:string" />
+    <part name="Moneda" type="xs:string" />
+    <part name="CompraVenta" type="xs:int" />
+  </message>
+  <message name="ObtenerCotizacion3Response">
+    <part name="return" type="xs:double" />
+  </message>
+  <message name="ObtenerRubros4Request">
+    <part name="Empresa" type="xs:string" />
+  </message>
+  <message name="ObtenerRubros4Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="ObtenerTiposDocumentos5Request">
+    <part name="Empresa" type="xs:string" />
+  </message>
+  <message name="ObtenerTiposDocumentos5Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="AltaElemento6Request">
+    <part name="Empresa" type="xs:string" />
+    <part name="Conjunto" type="xs:string" />
+    <part name="Elemento" type="xs:string" />
+    <part name="Nombre" type="xs:string" />
+    <part name="Datos" type="xs:string" />
+  </message>
+  <message name="AltaElemento6Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="ModificarElemento7Request">
+    <part name="Empresa" type="xs:string" />
+    <part name="Conjunto" type="xs:string" />
+    <part name="Elemento" type="xs:string" />
+    <part name="Nombre" type="xs:string" />
+    <part name="Datos" type="xs:string" />
+    <part name="ModificarHabilitado" type="xs:boolean" />
+    <part name="Habilitado" type="xs:boolean" />
+  </message>
+  <message name="ModificarElemento7Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="BajaElemento8Request">
+    <part name="Empresa" type="xs:string" />
+    <part name="Conjunto" type="xs:string" />
+    <part name="Elemento" type="xs:string" />
+  </message>
+  <message name="BajaElemento8Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="ConsultaElemento9Request">
+    <part name="Empresa" type="xs:string" />
+    <part name="Conjunto" type="xs:string" />
+    <part name="Elemento" type="xs:string" />
+    <part name="Campo" type="xs:string" />
+  </message>
+  <message name="ConsultaElemento9Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="ConsultaElementos10Request">
+    <part name="Empresa" type="xs:string" />
+    <part name="Conjunto" type="xs:string" />
+  </message>
+  <message name="ConsultaElementos10Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="ConsultaElementosPaginado11Request">
+    <part name="Empresa" type="xs:string" />
+    <part name="Conjunto" type="xs:string" />
+    <part name="TamanoPagina" type="xs:int" />
+    <part name="NumPagina" type="xs:int" />
+  </message>
+  <message name="ConsultaElementosPaginado11Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="ObtenerElementosConCampo12Request">
+    <part name="Empresa" type="xs:string" />
+    <part name="Conjunto" type="xs:string" />
+    <part name="Campo" type="xs:string" />
+    <part name="Valor" type="xs:string" />
+  </message>
+  <message name="ObtenerElementosConCampo12Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="ObtenerCantidadElementos13Request">
+    <part name="Empresa" type="xs:string" />
+    <part name="Conjunto" type="xs:string" />
+  </message>
+  <message name="ObtenerCantidadElementos13Response">
+    <part name="return" type="xs:int" />
+  </message>
+  <message name="ExisteElemento14Request">
+    <part name="Empresa" type="xs:string" />
+    <part name="Conjunto" type="xs:string" />
+    <part name="Elemento" type="xs:string" />
+  </message>
+  <message name="ExisteElemento14Response">
+    <part name="return" type="xs:boolean" />
+  </message>
+  <message name="ObtenerConjuntos15Request">
+    <part name="Empresa" type="xs:string" />
+  </message>
+  <message name="ObtenerConjuntos15Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="RecuperoSaldo16Request">
+    <part name="Empresa" type="xs:string" />
+    <part name="Moneda" type="xs:string" />
+    <part name="Rubro" type="xs:string" />
+    <part name="Fecha" type="xs:string" />
+    <part name="ElementoAuxiliar" type="xs:string" />
+    <part name="ConjuntoAuxiliar" type="xs:string" />
+  </message>
+  <message name="RecuperoSaldo16Response">
+    <part name="return" type="xs:double" />
+  </message>
+  <message name="ConvertirImporte17Request">
+    <part name="Empresa" type="xs:string" />
+    <part name="Importe" type="xs:double" />
+    <part name="MonedaOri" type="xs:string" />
+    <part name="MonedaFin" type="xs:string" />
+    <part name="Fecha" type="xs:string" />
+    <part name="Decimales" type="xs:int" />
+  </message>
+  <message name="ConvertirImporte17Response">
+    <part name="return" type="xs:double" />
+  </message>
+  <message name="ListaElementos18Request">
+    <part name="Empresa" type="xs:string" />
+    <part name="Conjunto" type="xs:string" />
+    <part name="Filtro" type="xs:string" />
+    <part name="Datos" type="xs:string" />
+    <part name="NroPagina" type="xs:int" />
+    <part name="TamanoPagina" type="xs:int" />
+  </message>
+  <message name="ListaElementos18Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="ImprimirCheques19Request">
+    <part name="Parametros" type="xs:string" />
+  </message>
+  <message name="ImprimirCheques19Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="LiquidarWeb20Request">
+    <part name="Empresa" type="xs:string" />
+    <part name="FechaLiquidacion" type="xs:string" />
+    <part name="NumeroLiquidacion" type="xs:string" />
+    <part name="FechaCotizacion" type="xs:string" />
+    <part name="Terminal" type="xs:string" />
+    <part name="Usuario" type="xs:string" />
+    <part name="Debug" type="xs:string" />
+  </message>
+  <message name="LiquidarWeb20Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="EsFormulaValidaWeb21Request">
+    <part name="Formula" type="xs:string" />
+  </message>
+  <message name="EsFormulaValidaWeb21Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="MarcarAsientoDigitalizado22Request">
+    <part name="XEmpresa" type="xs:string" />
+    <part name="XFecha" type="xs:string" />
+    <part name="XTipoAsiento" type="xs:string" />
+    <part name="XNumeroAsiento" type="xs:int" />
+  </message>
+  <message name="MarcarAsientoDigitalizado22Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="DesmarcarAsientoDigitalizado23Request">
+    <part name="XEmpresa" type="xs:string" />
+    <part name="XFecha" type="xs:string" />
+    <part name="XTipoAsiento" type="xs:string" />
+    <part name="XNumeroAsiento" type="xs:int" />
+  </message>
+  <message name="DesmarcarAsientoDigitalizado23Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="ValidarUsuario24Request">
+    <part name="Usuario" type="xs:string" />
+    <part name="Clave" type="xs:string" />
+  </message>
+  <message name="ValidarUsuario24Response">
+    <part name="return" type="xs:boolean" />
+  </message>
+  <message name="Netear25Request">
+    <part name="netear" type="xs:string" />
+  </message>
+  <message name="Netear25Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="ObtenerDocumentosContables26Request">
+    <part name="Parametros" type="xs:string" />
+  </message>
+  <message name="ObtenerDocumentosContables26Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="CargarCotizacionesBCU27Request">
+    <part name="Fecha" type="xs:string" />
+  </message>
+  <message name="CargarCotizacionesBCU27Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="GenerarAsiento28Request">
+    <part name="Asiento" type="xs:string" />
+  </message>
+  <message name="GenerarAsiento28Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <message name="ObtenerMovimientosContables29Request">
+    <part name="Parametros" type="xs:string" />
+  </message>
+  <message name="ObtenerMovimientosContables29Response">
+    <part name="return" type="xs:string" />
+  </message>
+  <portType name="ITSOAPWebServiceConta">
+    <operation name="ObtenerEmpresas">
+      <input message="tns:ObtenerEmpresas0Request" />
+      <output message="tns:ObtenerEmpresas0Response" />
+    </operation>
+    <operation name="ObtenerUsuarios">
+      <input message="tns:ObtenerUsuarios1Request" />
+      <output message="tns:ObtenerUsuarios1Response" />
+    </operation>
+    <operation name="ObtenerMonedas">
+      <input message="tns:ObtenerMonedas2Request" />
+      <output message="tns:ObtenerMonedas2Response" />
+    </operation>
+    <operation name="ObtenerCotizacion">
+      <input message="tns:ObtenerCotizacion3Request" />
+      <output message="tns:ObtenerCotizacion3Response" />
+    </operation>
+    <operation name="ObtenerRubros">
+      <input message="tns:ObtenerRubros4Request" />
+      <output message="tns:ObtenerRubros4Response" />
+    </operation>
+    <operation name="ObtenerTiposDocumentos">
+      <input message="tns:ObtenerTiposDocumentos5Request" />
+      <output message="tns:ObtenerTiposDocumentos5Response" />
+    </operation>
+    <operation name="AltaElemento">
+      <input message="tns:AltaElemento6Request" />
+      <output message="tns:AltaElemento6Response" />
+    </operation>
+    <operation name="ModificarElemento">
+      <input message="tns:ModificarElemento7Request" />
+      <output message="tns:ModificarElemento7Response" />
+    </operation>
+    <operation name="BajaElemento">
+      <input message="tns:BajaElemento8Request" />
+      <output message="tns:BajaElemento8Response" />
+    </operation>
+    <operation name="ConsultaElemento">
+      <input message="tns:ConsultaElemento9Request" />
+      <output message="tns:ConsultaElemento9Response" />
+    </operation>
+    <operation name="ConsultaElementos">
+      <input message="tns:ConsultaElementos10Request" />
+      <output message="tns:ConsultaElementos10Response" />
+    </operation>
+    <operation name="ConsultaElementosPaginado">
+      <input message="tns:ConsultaElementosPaginado11Request" />
+      <output message="tns:ConsultaElementosPaginado11Response" />
+    </operation>
+    <operation name="ObtenerElementosConCampo">
+      <input message="tns:ObtenerElementosConCampo12Request" />
+      <output message="tns:ObtenerElementosConCampo12Response" />
+    </operation>
+    <operation name="ObtenerCantidadElementos">
+      <input message="tns:ObtenerCantidadElementos13Request" />
+      <output message="tns:ObtenerCantidadElementos13Response" />
+    </operation>
+    <operation name="ExisteElemento">
+      <input message="tns:ExisteElemento14Request" />
+      <output message="tns:ExisteElemento14Response" />
+    </operation>
+    <operation name="ObtenerConjuntos">
+      <input message="tns:ObtenerConjuntos15Request" />
+      <output message="tns:ObtenerConjuntos15Response" />
+    </operation>
+    <operation name="RecuperoSaldo">
+      <input message="tns:RecuperoSaldo16Request" />
+      <output message="tns:RecuperoSaldo16Response" />
+    </operation>
+    <operation name="ConvertirImporte">
+      <input message="tns:ConvertirImporte17Request" />
+      <output message="tns:ConvertirImporte17Response" />
+    </operation>
+    <operation name="ListaElementos">
+      <input message="tns:ListaElementos18Request" />
+      <output message="tns:ListaElementos18Response" />
+    </operation>
+    <operation name="ImprimirCheques">
+      <input message="tns:ImprimirCheques19Request" />
+      <output message="tns:ImprimirCheques19Response" />
+    </operation>
+    <operation name="LiquidarWeb">
+      <input message="tns:LiquidarWeb20Request" />
+      <output message="tns:LiquidarWeb20Response" />
+    </operation>
+    <operation name="EsFormulaValidaWeb">
+      <input message="tns:EsFormulaValidaWeb21Request" />
+      <output message="tns:EsFormulaValidaWeb21Response" />
+    </operation>
+    <operation name="MarcarAsientoDigitalizado">
+      <input message="tns:MarcarAsientoDigitalizado22Request" />
+      <output message="tns:MarcarAsientoDigitalizado22Response" />
+    </operation>
+    <operation name="DesmarcarAsientoDigitalizado">
+      <input message="tns:DesmarcarAsientoDigitalizado23Request" />
+      <output message="tns:DesmarcarAsientoDigitalizado23Response" />
+    </operation>
+    <operation name="ValidarUsuario">
+      <input message="tns:ValidarUsuario24Request" />
+      <output message="tns:ValidarUsuario24Response" />
+    </operation>
+    <operation name="Netear">
+      <input message="tns:Netear25Request" />
+      <output message="tns:Netear25Response" />
+    </operation>
+    <operation name="ObtenerDocumentosContables">
+      <input message="tns:ObtenerDocumentosContables26Request" />
+      <output message="tns:ObtenerDocumentosContables26Response" />
+    </operation>
+    <operation name="CargarCotizacionesBCU">
+      <input message="tns:CargarCotizacionesBCU27Request" />
+      <output message="tns:CargarCotizacionesBCU27Response" />
+    </operation>
+    <operation name="GenerarAsiento">
+      <input message="tns:GenerarAsiento28Request" />
+      <output message="tns:GenerarAsiento28Response" />
+    </operation>
+    <operation name="ObtenerMovimientosContables">
+      <input message="tns:ObtenerMovimientosContables29Request" />
+      <output message="tns:ObtenerMovimientosContables29Response" />
+    </operation>
+  </portType>
+  <binding name="ITSOAPWebServiceContabinding" type="tns:ITSOAPWebServiceConta">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="ObtenerEmpresas">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ObtenerEmpresas" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ObtenerUsuarios">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ObtenerUsuarios" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ObtenerMonedas">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ObtenerMonedas" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ObtenerCotizacion">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ObtenerCotizacion" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ObtenerRubros">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ObtenerRubros" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ObtenerTiposDocumentos">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ObtenerTiposDocumentos" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="AltaElemento">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#AltaElemento" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ModificarElemento">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ModificarElemento" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="BajaElemento">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#BajaElemento" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ConsultaElemento">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ConsultaElemento" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ConsultaElementos">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ConsultaElementos" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ConsultaElementosPaginado">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ConsultaElementosPaginado" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ObtenerElementosConCampo">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ObtenerElementosConCampo" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ObtenerCantidadElementos">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ObtenerCantidadElementos" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ExisteElemento">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ExisteElemento" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ObtenerConjuntos">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ObtenerConjuntos" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="RecuperoSaldo">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#RecuperoSaldo" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ConvertirImporte">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ConvertirImporte" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ListaElementos">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ListaElementos" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ImprimirCheques">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ImprimirCheques" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="LiquidarWeb">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#LiquidarWeb" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="EsFormulaValidaWeb">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#EsFormulaValidaWeb" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="MarcarAsientoDigitalizado">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#MarcarAsientoDigitalizado" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="DesmarcarAsientoDigitalizado">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#DesmarcarAsientoDigitalizado" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ValidarUsuario">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ValidarUsuario" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="Netear">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#Netear" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ObtenerDocumentosContables">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ObtenerDocumentosContables" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="CargarCotizacionesBCU">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#CargarCotizacionesBCU" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="GenerarAsiento">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#GenerarAsiento" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ObtenerMovimientosContables">
+      <soap:operation soapAction="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta#ObtenerMovimientosContables" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:TWebServiceContaIntf1-ITSOAPWebServiceConta" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ITSOAPWebServiceContaservice">
+    <port name="ITSOAPWebServiceContaPort" binding="tns:ITSOAPWebServiceContabinding">
+      <soap:address location="http://192.168.2.99:1024/soap/ITSOAPWebServiceConta" />
+    </port>
+  </service>
+</definitions>
